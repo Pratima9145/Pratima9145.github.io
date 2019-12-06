@@ -27,7 +27,7 @@ function validation() {
 	var c = document.forms["menuform"]["launch"].value;
 	if(c=="") {
 		alert("Date of launch is required");
-		document.forms["menus"]["launch"].focus();
+		document.forms["menuform"]["launch"].focus();
 		return false;
 	}
 	var d = document.forms["menuform"]["category"].value;

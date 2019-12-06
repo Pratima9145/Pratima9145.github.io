@@ -26,7 +26,7 @@ img {
 }
 #menu {
     float: right;
-	margin-right: 10px;
+	margin-right: 20px;
     margin-top: 10px;
     color: #ffffff;
 }
@@ -41,7 +41,7 @@ h2, table {
 }
 .names {
     text-align: left;
-	width: 130px;
+	width: 160px;
 }
 .prices {
     text-align: right;
