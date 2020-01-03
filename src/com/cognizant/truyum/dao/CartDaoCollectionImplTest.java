@@ -25,10 +25,14 @@ public class CartDaoCollectionImplTest {
 
 	public static void testGetAllCartItems() throws CartEmptyException {
 		CartDao cartDao = new CartDaoCollectionImpl();
+		try {
 		List<MenuItem> menuItemListCustomer = cartDao.getAllCartItems(1L);
 		System.out.println("\nUser List All Cart Items");
 		for (MenuItem menuItem : menuItemListCustomer) {
 			System.out.println(menuItem);
+		}
+		}catch(Exception ex) {
+			System.out.println("Cart is empty");
 		}
 	}
 
