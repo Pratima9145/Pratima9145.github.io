@@ -1,7 +1,7 @@
 -- Include table data insertion, updation, deletion and select scripts
 -- -------------------------------------------------------------------
 -- Adding Menu Items in MenuItem Table
--- -------------000------------------------------------------------------
+-- -------------------------------------------------------------------
 INSERT INTO menu_item
 VALUES 
 (1, 'Sandwich', 99.0, 'Yes', '2017-03-15','Main Course', 'Yes'),
