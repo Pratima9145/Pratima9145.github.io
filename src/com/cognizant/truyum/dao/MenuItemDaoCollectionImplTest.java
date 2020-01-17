@@ -1,5 +1,6 @@
 package com.cognizant.truyum.dao;
 
+import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.List;
 
@@ -7,7 +8,7 @@ import com.cognizant.truyum.model.MenuItem;
 import com.cognizant.truyum.util.DateUtil;
 
 public class MenuItemDaoCollectionImplTest {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 		try {
 			System.out.println("\n---- Admin List ---");
 			testGetMenuItemListAdmin();
@@ -26,10 +27,9 @@ public class MenuItemDaoCollectionImplTest {
 		MenuItem mn = new MenuItem(1, "Vegsandwich", 92.0f, true, DateUtil.convertToDate("12/02/2017"), "Dessert",
 				true);
 		menuItemDao.modifyMenuItem(mn);
-
 	}
 
-	public static void testGetMenuItemListAdmin() throws ParseException {
+	public static void testGetMenuItemListAdmin() throws ParseException, SQLException {
 		MenuItemDao menuItemDao = new MenuItemDaoCollectionImpl();
 
 		menuItemDao.getMenuItemListAdmin();

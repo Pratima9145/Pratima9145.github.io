@@ -9,9 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.cognizant.truyum.dao.CartDao;
-import com.cognizant.truyum.dao.CartDaoCollectionImpl;
+import com.cognizant.truyum.dao.CartDaoSqlImpl;
 import com.cognizant.truyum.dao.MenuItemDao;
 import com.cognizant.truyum.dao.MenuItemDaoCollectionImpl;
 import com.cognizant.truyum.model.MenuItem;
@@ -41,7 +39,7 @@ public class AddToCartServlet extends HttpServlet {
 		try {
 			long userId = 1L;
 			long menuItemId = Long.parseLong(request.getParameter("menuItemId"));
-			CartDao cartDao = new CartDaoCollectionImpl();
+			CartDaoSqlImpl cartDao = new CartDaoSqlImpl();
 
 			cartDao.addCartItems(1, menuItemId);
 			MenuItemDao menuItemDao = new MenuItemDaoCollectionImpl();

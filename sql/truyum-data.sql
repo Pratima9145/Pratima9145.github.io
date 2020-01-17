@@ -82,4 +82,13 @@ INNER JOIN cart
 on ct_pr_id=me_id
 where ct_us_id=2; 
 
+-- -----------------------------------------------------
+-- Delete Favorite Items from Favorites Table
+-- -----------------------------------------------------
+delete from favorites
+where ft_us_id=2
+and ft_pr_id=1
+limit 1; 
+
+
 
